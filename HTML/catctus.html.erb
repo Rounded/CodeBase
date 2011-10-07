@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title><%= @site.name %></title>
+		<!-- <link rel="apple-touch-startup-image" href="images/splash.gif" /> 
+		<link rel="apple-touch-icon-precomposed" href="images/icon.png" />  -->
+		<%= stylesheet_link_tag "http://wearemobile.co/styles/style.css" %>
+		<%# stylesheet_link_tag "/stylesheets/cactus/add2home" %>
+		<%# javascript_include_tag "/javascripts/cactus/iscroll" %>
+		<%# javascript_include_tag "/javascripts/cactus/twitter" %>
+		<%# javascript_include_tag "/javascripts/cactus/instagram" %>
+		<%= javascript_include_tag "http://wearemobile.co/scripts/iscroll.js" %>
+		<%= javascript_include_tag "http://wearemobile.co/scripts/hash.js" %>
+		<%= javascript_include_tag "http://wearemobile.co/scripts/app.js" %>
+	</head>
+	<body>
+		<!-- Javascript conditionals -->
+		<div id="if-rssPop"></div>
+		<!-- End Javascript conditionals -->
+		<%= yield %>
+		<div id="popup1" class="page hide popup-page"></div>
+		<div id="popup-header" class="hide">
+			<a href="#1" id="popup-back-btn" name="popup-back-btn"></a>
+			<h4 id="popup-title"></h4>
+		</div>		
+	</body>
+</html>

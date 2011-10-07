@@ -1,0 +1,41 @@
+<script>
+		jQuery(document).ready(function() {
+			$('#androidPopup').hide();
+				if(navigator.userAgent.match(/Android/i)) {
+					$('#androidPopup').fadeIn(2000);
+					$('#androidPopup').click(function() {
+						$(this).hide();
+					});
+				 }
+		});
+		
+		</script>
+		<style>
+			#androidPopup{
+				width: 90%;
+				display: block;
+				background: #333;
+				color: #fff;
+				margin: 40px auto;
+				padding: 10px;
+				line-height: 1.75em;
+				-webkit-border-radius: 7px;
+			}
+			h3{
+				font-weight: bold;
+			}
+		</style>
+
+
+
+
+<div id="androidPopup">
+	<h3>Install this app on your homescreen:</h3>
+	<ul id="androidSteps">
+		<li>Press Menu Icon</li>
+		<li>Press the more Button</li>
+		<li>Add Bookmark</li>
+		<li>Hit Home</li>
+		<li>Long Press homescreen add shortcut then choose our site from the bookmarks</li>
+	</ul>
+</div>
