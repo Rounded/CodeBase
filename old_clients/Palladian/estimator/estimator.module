@@ -1,0 +1,317 @@
+<?php
+//Create scripts
+	drupal_add_js(drupal_get_path('module', 'estimator') .'/estimator.js');
+	drupal_add_js(drupal_get_path('module', 'estimator') .'/gchart.js');
+	drupal_add_js(drupal_get_path('module', 'estimator') .'/google.js');
+	drupal_add_js(drupal_get_path('module', 'estimator') .'/google2.js');
+
+
+
+
+//Create menus / paths
+function estimator_menu(){
+	$items = array();
+	$items['estimator'] = array(
+		'title' => t("Estimator Module"),
+		'page callback' => 'estimator_page',
+		'page arguments' => array("1"),
+		'access arguments' => array('access content'),
+	);
+
+	$items['estimator/result/%'] = array(
+		'path' => 'estimator/result/',
+		'title' => t("Plan Summary"),
+		'page callback' => 'result_page',
+		'page arguments' => array(2),
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK,
+	);
+
+	return $items;
+}
+
+//Create pages
+function estimator_page() {
+	$content = drupal_get_form('estimator_form');
+	return $content;
+}
+
+function result_page($arg1) {
+	$content = "";
+	$hasCol = false;
+	$result = db_query('SELECT * FROM drupal_estimator where uid = "%s"',$arg1);
+	while ($estimate = db_fetch_object($result)) {
+		$name = $estimate->name;
+		$plan = $estimate->plan;
+		$email = $estimate->email;
+		$title = $estimate->title;
+		$plan_type = $estimate->plan_type;
+		$total_exp = $estimate->total_exp;
+		$spine_exp = $estimate->spine_exp;
+		$pt_exp = $estimate->pt_exp;
+		$dc_exp = $estimate->dc_exp;
+		$spine_sav = $estimate->spine_sav;
+		$pt_sav = $estimate->pt_sav;
+		$chiro_sav = $estimate->chiro_sav;
+		$total_sav = $estimate->total_sav;
+
+		if($estimate->uid){
+			$hasCol = true;
+		}
+	}
+
+	if(!$hasCol){
+		drupal_set_message('Page not found');
+	}
+
+	else{
+		//Data
+		$content .= "<div id='data' style='float:left'>";
+			$content.= "<div id='data-leftcol' style='width:460px;float:left'>";
+				$content .= "<br><br><h2>Description of Palladian savings estimates</h2><ul>";
+				$content .= "<li><strong>Full Name: </strong>".$name."</li>";
+				$content .= "<li><strong>Health Plan: </strong>".$plan."</li>";
+				$content .= "<li><strong>Email: </strong>".$email."</li>";
+				if($title != '')
+					$content .= "<li><strong>Title: </strong>".$title."</li>";
+				$content .= "</ul>";
+			$content.= "</div>";
+			
+			$content.= "<div id='data-rightcol' style='width:400px;float:right'>";
+				$content .= "<br><br><h2>Savings Summary</h2><ul>";
+				$content .= "<li><strong>Total ".$plan_type." Expenditures: </strong><span id='exp1'>".$total_exp."</span></li>";
+				$content .= "<span id='exp2' style='display:none;'>".$spine_exp."</span>";
+				$content .= "<span id='exp3' style='display:none;'>".$pt_exp."</span>";
+				$content .= "<span id='exp4' style='display:none;'>".$dc_exp."</span>";
+				$content .= "<li><strong>Spine ".$plan_type." Savings: </strong><span id='sav1'>".$spine_sav."</span></li>";
+				$content .= "<li><strong>Physical Therapy ".$plan_type." Savings: </strong><span id='sav2'>".$pt_sav."</span></li>";
+				$content .= "<li><strong>Chiropractic ".$plan_type." Savings: </strong><span id='sav3'>".$chiro_sav."</span></li>";
+				$content .= "<li><strong>Total ".$plan_type." Savings: </strong><span id='sav4'>".$total_sav."</span></li>";
+			$content.= "</div>";
+			$content .= "<hr />";
+		$content .= "</div>";
+		
+		//Graphs
+		$content .= "<div id='graph1' style='float:left; width:800px; border-top:2px solid #c7c7c7'></div>";
+
+		$content .= "<div id='graph2' style='float:left;width:800px'></div>";
+
+		
+		
+
+	}
+	return $content;
+}
+
+//Create form
+function estimator_form(){
+	$form = array();
+
+	$form['name'] = array(
+		'#type' => 'textfield',
+		'#title' => t("Full name"),
+		'#id' => 'name-id',
+		'#required' => TRUE,
+	);
+
+	$form['plan'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Health plan name'),
+		'#id' => 'plan-id',
+		'#required' => TRUE,
+	);
+
+	$form['email'] = array(
+		'#type' => 'textfield',
+		'#title' => t("Email address"),
+		'#id' => 'email-id',
+		'#required' => TRUE,
+	);
+
+	$form['title'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Title'),
+		'#id' => 'title-id',
+		'#required' => FALSE,
+	);
+
+	$form['plan_type'] = array(
+		'#type' => 'select',
+		'#title' => 'Plan type',
+		'#options' => array(t('   Medicare'), t('Medicaid'),t('Commercial'),t('All')),
+		'#id' => 'plan-type-id',
+
+	);
+
+	//Total membership
+	$form['total_mem'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Total <span class="plan-title"></span> membership'),
+		'#id' => 'total-mem-id',
+		'#required' => TRUE,
+
+	);
+
+	//Total $ expenditures
+	$form['total_exp'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Total <span class="plan-title"></span> expenditures'),
+		'#description' => "* Calculation - correct if inaccurate. Assumed medical costs are $10,000 for Medicaid/Medicare, $3,700 for commercial ",
+		'#id' => 'total-exp-id',
+		'#required' => TRUE,
+	);
+
+	//Total spine expenditures
+	$form['spine_exp'] = array(
+		'#type' => 'hidden',
+		'#id' => 'spine-exp-id',
+
+	);
+
+	//Total pt expenditures
+	$form['pt_exp'] = array(
+		'#type' => 'hidden',
+		'#id' => 'pt-exp-id',
+	);
+
+	//Total dc expenditures
+	$form['dc_exp'] = array(
+		'#type' => 'hidden',
+		'#id' => 'dc-exp-id',
+	);
+
+	$form['chiro'] = array(
+		'#type' => 'radios',
+		'#title' => t('Do you have a covered chiropractic benefit?'),
+		'#options' => array(t('Yes'), t('No')),
+		'#default_value' => variable_get('options',1),
+		'#id' => 'chiro-id',
+	);
+
+	$form['pt'] = array(
+		'#type' => 'radios',
+		'#title' => t('Do you currently have a physical therapy vendor?'),
+		'#options' => array(t('Yes'), t('No')),
+		'#default_value' => variable_get('options',1),
+		'#id' => 'pt-id',
+	);
+
+	$form['chiro_ven'] = array(
+		'#type' => 'radios',
+		'#title' => t('Do you currently have a chiropractic vendor?'),
+		'#options' => array(t('Yes'), t('No')),
+		'#default_value' => variable_get('options',1),
+		'#id' => 'chiro-ven-id',
+	);
+
+	$form['spine_sav'] = array(
+		'#type' => 'hidden',
+		'#id' => 'spine-sav-id',
+	);
+
+	$form['pt_sav'] = array(
+		'#type' => 'hidden',
+		'#id' => 'pt-sav-id',
+	);
+
+	$form['chiro_sav'] = array(
+		'#type' => 'hidden',
+		'#id' => 'chiro-sav-id',
+	);
+
+	$form['total_sav'] = array(
+		'#type' => 'hidden',
+		'#id' => 'total-sav-id',
+	);
+
+	//Submit form
+	$form['submit'] = array(
+		'#type' => 'submit',
+		'#value' => t('Submit'),
+	);
+
+	return $form;
+}
+
+function estimator_form_validate($form_id, &$form_data){
+	if(!is_string($form_data['values']['name'])){
+		form_set_error('name', t("Please Enter a valid name"));
+	}
+
+	elseif(!is_string($form_data['values']['plan'])){
+		form_set_error('plan', t("Please Enter a valid plan name"));
+	}
+
+	elseif(valid_email_address($form_data['values']['email'])==0){
+		form_set_error('email', t("Please Enter a valid email address"));
+	}
+}
+
+function estimator_form_submit($form_id, &$form_data){
+	//Unique ID &  date
+	$uid = uId(15);
+	$today = date('m-d-Y H:i:s');
+
+	//Radio button vars
+	if($form_data['values']['chiro'] == 0)
+		$chiro_radio = 'yes';
+	else
+		$chiro_radio = 'no';
+
+	if($form_data['values']['pt'] == 0)
+		$pt_radio = 'yes';
+	else
+		$pt_radio = 'no';
+
+	if($form_data['values']['chiro_ven'] == 0)
+		$chiro_ven_radio = 'yes';
+	else
+		$chiro_ven_radio = 'no';
+
+	//Plan text
+	if($form_data['values']['plan_type'] == 0)
+		$plan = "Medicare";
+	elseif($form_data['values']['plan_type'] == 1)
+		$plan = "Medicaid";
+	elseif($form_data['values']['plan_type'] == 2)
+		$plan = "Commercial";
+	elseif($form_data['values']['plan_type'] == 3)
+		$plan = "All";
+
+
+	//Fill database
+	db_query("INSERT INTO estimator (uid, date, name, plan, email, title, plan_type, total_mem, total_exp, spine_exp, pt_exp, dc_exp, chiro, pt, chiro_ven, spine_sav, pt_sav, chiro_sav, total_sav)
+		VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')", $uid, $today, $form_data['values']['name'], $form_data['values']['plan'],  $form_data['values']['email'],  $form_data['values']['title'],  $plan,  $form_data['values']['total_mem'],  $form_data['values']['total_exp'],  $form_data['values']['spine_exp'],  $form_data['values']['pt_exp'],  $form_data['values']['dc_exp'],  $chiro_radio, $pt_radio,  $chiro_ven_radio,  $form_data['values']['spine_sav'],  $form_data['values']['pt_sav'],  $form_data['values']['chiro_sav'],  $form_data['values']['total_sav']);
+	drupal_set_message(t("Thank you for your submission, we will email you a copy momentarily."));
+
+	//Send emails
+	$client_message = array(
+		'to' => $form_data['values']['email'],
+		'subject' => t('Palladian Health - Estimator Completion'),
+		'body' => t('Dear '.$form_data['values']['name'].",\n\nThank you for taking the time to stop by our booth at AHIP this year. Below is a copy of the savings estimates we generated based on the information we gathered from you about your business. We would greatly appreciate an opportunity to discuss this in more detail in either a face to face meeting or webinar. Please contact Mark Zygaj at mzygaj@palladianhealth.com to schedule follow up discussions.\n\nhttp://drupal.cloudformed.com/estimator/result/".$uid),
+		'headers' => array('From' => 'estimator@palladianhealth.com'),
+	);
+
+	$palladian_message = array(
+		'to' => 'rkirkpatrick@palladianhealth.com',
+		'subject' => t('Estimator Submission from '.$form_data['values']['name']),
+		'body' => t('http://drupal.cloudformed.com/estimator/result/'.$uid),
+		'headers' => array('From' => 'admin@palladianhealth.com'),
+	);
+
+	drupal_mail_send($client_message);
+	drupal_mail_send($palladian_message);
+
+	//Switch to result page
+	drupal_goto($path = 'estimator/result/'.$uid);
+
+}
+
+function uId($length) {
+	$characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+	$uId ='';
+	for ($p = 0; $p < $length; $p++) {
+		$uId .= $characters[mt_rand(0, strlen($characters))];
+	}
+	return $uId;
+}

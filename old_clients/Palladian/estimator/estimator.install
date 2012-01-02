@@ -1,0 +1,145 @@
+<?php
+//$Id
+/**
+ * Implement hook_schema()
+ */
+function estimator_schema(){
+	$schema['estimator'] = array(
+		'description' => t('Storing of estimator data'),
+		'fields'=>array(
+			'id'=>array(
+				'type'=>'serial',
+				'unsigned'=>TRUE,
+				'not null'=>TRUE
+			),
+			'uid'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'date'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'name'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'plan'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'email'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'title'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'plan_type'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'total_mem'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'total_exp'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'spine_exp'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+				'pt_exp'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'dc_exp'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'chiro'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'pt'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'chiro_ven'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>TRUE
+			),
+			'spine_sav'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'pt_sav'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'chiro_sav'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			'total_sav'=>array(
+				'type'=>'varchar',
+				'length'=>255,
+				'default' => '',
+				'not null'=>FALSE
+			),
+			),
+		 'primary key'=>array("id"),
+		 );
+	 return $schema;
+}
+/**
+ * Implement hook_install()
+ */
+function estimator_install(){
+ drupal_install_schema('estimator');
+}
+/**
+ * Implement hook_uninstall
+ */
+function estimator_uninstall(){
+ drupal_uninstall_schema('estimator');
+}
