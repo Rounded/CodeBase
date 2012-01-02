@@ -1,0 +1,338 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*===========================================*/
+/*        END CSS Reset        */
+/*===========================================*/
+
+
+/*===========================================*/
+/*        Global CSS           */
+/*===========================================*/
+
+body {
+  background:url(images/side_bg.png) top repeat-x #faed54;
+  color: #444;
+  font-family: Helvetica;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #16CCF7;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.section {
+  width: 100%;
+  float: left;
+/*  background: #fff; */
+  /*padding-bottom: 40px;*/
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0px auto;
+}
+
+.clear {
+  clear: both;
+}
+
+/********************
+    Columns
+********************/
+.col960 { /* 1 column */
+  width: 960px;
+  float: left;
+}
+
+.col800 {
+  width: 800px;
+  float: left;
+}
+
+.col700 {
+  width: 700px;
+  float: left;
+}
+
+.col472 { /* 2 columns 20 gutter */
+  width: 472px;
+  float: left;
+  margin-right: 20px;
+}
+
+.col308 {
+  width: 308px;
+  float: left;
+  margin-right: 20px;
+}
+
+.col300{
+  width:300px;
+  float:left;
+  margin-right:10px;
+}
+
+.col314 {
+  width: 314px;
+  float: left;
+}
+
+.col240 {
+  width: 240px;
+  float: left;
+}
+
+.col225 {
+  width: 225px;
+  float: left;
+}
+
+.last {
+  margin: 0;
+}
+
+
+/*===============================*/
+/*			Survey				 */
+/*===============================*/
+
+#left-border{
+  
+  width:;
+  float:left;
+}
+
+.question {
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #BBB;
+  text-align: left;
+}
+
+.question.first {
+  border-top: none;
+}
+
+.question .number-box {
+	width: 84px;
+	float: left;
+	border-right: 1px solid #eee;
+	background: #ddd url(gloss500.png) 50% 50% repeat-x;
+	text-align: center;
+}
+
+.question .number {
+	font-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: 50pt;
+	text-shadow: 1px 1px 2px #999;
+}
+
+.question .question-box {
+	width: 219px;
+	padding: 20px 0px 20px 15px;
+	float: left;
+	border-left: 1px solid #999;
+}
+
+.question h1 {
+  font-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 11pt;
+  -webkit-margin-before: 0;
+}
+
+.question .option {
+  font-size: 10pt;
+  border: none;
+}
+.question .ui-button{
+  width: 200px;
+}
+
+.email input {
+  border: 0;
+  padding: 10px;
+  width: 180px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.question textarea {
+  width: 200px;
+  font-size: 15px;
+}
+
+#submit-survey {
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: block;
+  margin: 15px auto;
+  width: 280px;
+  height: 45px;
+  background: #FF8A00 url(gloss500.png) 50% 50% repeat-x;
+  border: 1px solid #FF8A00;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: #000 0 1px 1px;
+  cursor: pointer;
+}
+#submit-survey:hover,
+#submit-survey:active {
+  background: #FC7C05 url(gloss500.png) 50% 50% repeat-x;
+}
+body {
+  font-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 12pt;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: #fff;
+}
+
+.clear {
+  clear: both;
+}
+
+#container {
+  width: 320px;
+  margin-bottom: 50px;
+}
+
+/*===============================*/
+/*      Header         */
+/*===============================*/
+
+/*===============================*/
+/*      Survey         */
+/*===============================*/
+
+.question {
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #BBB;
+  text-align: left;
+}
+
+.question.first {
+  border-top: none;
+}
+
+.question .number-box {
+  width: 84px;
+  float: left;
+  border-right: 1px solid #eee;
+  background: #ddd url(gloss500.png) 50% 50% repeat-x;
+  text-align: center;
+}
+
+.question .number {
+  font-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 50pt;
+  text-shadow: 1px 1px 2px #999;
+}
+
+.question .question-box {
+  width: 219px;
+  padding: 20px 0px 20px 15px;
+  float: left;
+  border-left: 1px solid #999;
+}
+
+.question h1 {
+  font-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 11pt;
+  -webkit-margin-before: 0;
+}
+
+.question .option {
+  font-size: 10pt;
+  border: none;
+}
+.question .ui-button{
+  width: 200px;
+}
+
+.email input {
+  border: 0;
+  padding: 10px;
+  width: 180px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.question textarea {
+  width: 200px;
+  font-size: 15px;
+}
+
+#submit-survey {
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: block;
+  margin: 15px auto;
+  width: 280px;
+  height: 45px;
+  background: #FF8A00 url(gloss500.png) 50% 50% repeat-x;
+  border: 1px solid #FF8A00;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: #000 0 1px 1px;
+  cursor: pointer;
+}
+#submit-survey:hover,
+#submit-survey:active {
+  background: #FC7C05 url(gloss500.png) 50% 50% repeat-x;
+}

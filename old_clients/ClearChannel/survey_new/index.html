@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Survey</title>
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+ <!-- <link href="jqueryui.css" media="screen" rel="stylesheet" type="text/css" /> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="header-section">
+  <div id="header" class="wrapper">
+    <img src="images/header.png" alt="Header" />
+  </div>
+</div><!-- /header -->
+
+<div id="form-section">
+  <div id="form" class="wrapper">
+    <form>
+      <!-- ************ Question 1 *************-->
+      <div class="question">
+        <div class="number-box">
+          <span class="number">1</span> <!-- end number -->
+        </div>
+        <div class="question-box">
+          <h1><strong>Please complete this sentence and be specific:</strong><br />We will have job growth in Central New York during the next five years, if: </h1>
+            
+            <input type="text" class="text-input" name="" value="" placeholder="Finish sentence here">
+        </div><!-- /question-box -->
+      <div class="clear"></div>
+      </div> <!-- end question -->
+
+      <!-- ************ Question 2 *************-->
+      <div class="question">
+        <div class="number-box">
+          <span class="number">2</span> <!-- end number -->
+        </div>
+        <div class="question-box">
+          <h1>Using the list of economic goals below, please pick YOUR TOP 3, with #1 being the MOST important goal for our region: </h1>
+          
+          <input type="text" class="text-input-2" id="question2_1" placeholder="#" maxlength="1" />
+          <label for=="question2_1">Better public transportation</label><br />
+
+          <input type="text" class="text-input-2" id="question2_2" placeholder="#" maxlength="1" />
+          <label for=="question2_2">Fewer people living in poverty</label><br />
+
+          <input type="text" class="text-input-2" id="question2_3" placeholder="#" maxlength="1" />
+          <label for=="question2_3">More businesses</label><br />
+
+          <input type="text" class="text-input-2" id="question2_4" placeholder="#" maxlength="1" />
+          <label for=="question2_4">Higher wages</label><br />
+
+          <input type="text" class="text-input-2" id="question2_5" placeholder="#" maxlength="1" />
+          <label for=="question2_5">A greener economy</label><br />
+
+          <input type="text" class="text-input-2" id="question2_6" placeholder="#" maxlength="1" />
+          <label for=="question2_6">More jobs</label><br />
+
+          <input type="text" class="text-input-2" id="question2_7" placeholder="#" maxlength="1" />
+          <label for=="question2_7">More people choosing to live here</label><br />
+
+ 
+        </div><!-- /question-box -->
+      <div class="clear"></div>
+      </div> <!-- end question -->
+
+      <!-- ************ Question 3 *************-->
+      <div class="question">
+        <div class="number-box">
+          <span class="number">3</span> <!-- end number -->
+        </div>
+        <div class="question-box">
+          <h1>In your view, which of the following steps is <strong>most likely to transform</strong> the CNY economy? <strong>Choose one or add your own idea in the space provided.</strong></h1>
+          <div class="radio" id="question3">
+              <input class="button" id="question3_1" name="q3" type="radio" value="Strengthen communities by investing in neighborhoods, downtown areas and main streets" />
+              <label for="question3_1">Strengthen communities by investing in neighborhoods, downtown areas and main streets</label><br />
+
+              <input class="button" id="question3_2" name="q3" type="radio" value="GoSupport new businesses and unique CNY business strengths, like agriculture, tourism, healthcare, and renewable fuelsod" />
+              <label for="">Support new businesses and unique CNY business strengths, like agriculture, tourism, healthcare, and renewable fuels</label><br />
+
+              <input class="button" id="question3_3" name="q3" type="radio" value="Connect CNY to the global marketplace" />
+              <label for="">Connect CNY to the global marketplace</label><br />
+
+              <input class="button custom" id="question3_4" name="q3" type="radio" value="custom answer" />
+              <label for="">Other:</label>
+              <input type="text" class="text-input" name="q3" value="" placeholder="Custom Answer"> 
+          </div>
+        </div><!-- /question-box -->
+      <div class="clear"></div>
+      </div> <!-- end question -->
+
+      <!-- ************ Question 4 *************-->
+      <div class="question" >
+        <div class="number-box" id="number4">
+          <span class="number">4</span> <!-- end number -->
+        </div>
+        <div class="question-box" style="height:252px">
+          
+          <div class="hide-question">  
+                Answer question 3 to continue
+          </div>
+          <h1>Thinking about your top choice in Question 3, which of the following is <strong>most likely to achieve your top goal?</strong></h1>
+          <div class="radio">
+              
+              <div id="question4-1" style="display:none">  
+                <input class="button" id="" name="q4" type="radio" value="Construct green buildings to make cities and towns more attractive" />
+                <label for="">Construct green buildings to make cities and towns more attractive</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Encourage partnerships between business, cultural organizations, and higher education" />
+                <label for="">Encourage partnerships between business, cultural organizations, and higher education</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Close the education and opportunity gap through retraining and youth programs" />
+                <label for="">Close the education and opportunity gap through retraining and youth programs</label><br />
+              </div>
+              <div id="question4-2" style="display:none;">
+                <input class="button" id="" name="q4" type="radio" value="Improve the region’s health care system" />
+                <label for="">Improve the region’s health care system</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Invest in better marketing of tourism" />
+                <label for="">Invest in better marketing of tourism</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Expand businesses that offer energy efficiency" />
+                <label for="">Expand businesses that offer energy efficiency</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Improve the agriculture and food delivery system" />
+                <label for="">Improve the agriculture and food delivery system</label><br />
+              </div>
+              <div id="question4-3" style="display:none;">
+                <input class="button" id="" name="q4" type="radio" value="Increase the marketing of our region to global investors" />
+                <label for="">Increase the marketing of our region to global investors</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Offer grants to new businesses" />
+                <label for="">Offer grants to new businesses</label><br />
+                <input class="button" id="" name="q4" type="radio" value="Support business efforts to export more goods and services" />
+                <label for="">Support business efforts to export more goods and services</label><br />
+              </div>
+
+              <div id="question4-4" style="display:none;">
+              
+              </div>
+              
+              <input class="button custom" id="" name="q4" type="radio" value="custom answer" />
+              <label for="">Custom Answer:</label>
+              <input type="text" class="text-input" name="" value="" placeholder="Custom Answer"> 
+            </div>
+        </div><!-- /question-box -->
+      <div class="clear"></div>
+      </div> <!-- end question -->
+
+      <!-- ************ Question 5 *************-->
+      <div class="question">
+        <div class="number-box">
+          <span class="number">5</span> <!-- end number -->
+        </div>
+        <div class="question-box">
+          <h1><strong>Please complete this sentence and be specific: </strong><br /> The government can help businesses succeed in Central New York by:</h1>
+          <input type="text" class="text-input" name="" value="" placeholder="Finish sentence here">
+        </div><!-- /question-box -->
+        <div class="clear"></div>
+      </div> <!-- end question -->
+      
+      <!-- ************ Submit *************-->
+      <input id="submit-survey" name="commit" type="submit" value="Submit" /><br />
+
+     </form>
+  </div> <!-- end form -->      
+</div><!-- end form-section -->
+
+</body>

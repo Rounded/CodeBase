@@ -1,0 +1,4 @@
+2011-10-07 11:58:29 Warning: Warning (2): mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to MySQL server on '50.63.226.51' (4) in [/Users/Name/Library/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 561]
+2011-10-07 11:58:29 Warning: Warning (2): mysql_query() expects parameter 2 to be resource, boolean given in [/Users/Name/Library/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 613]
+2011-10-07 11:58:38 Warning: Warning (2): mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to MySQL server on '50.63.226.51' (4) in [/Users/Name/Library/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 561]
+2011-10-07 11:58:38 Warning: Warning (2): mysql_query() expects parameter 2 to be resource, boolean given in [/Users/Name/Library/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 613]

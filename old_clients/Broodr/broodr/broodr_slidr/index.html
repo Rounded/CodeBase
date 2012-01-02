@@ -1,0 +1,90 @@
+ <html>
+<head>
+    <title>broodr slidr</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="orbit.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="orbit.js"></script>
+    <!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="section" id="header-section">
+	<div class="wrapper" id="header">
+		<div id="header-top">
+			<div class="logo">
+			<img src="images/logo_header.png" align="broodr" />
+			</div><!-- END .logo -->
+			<div class="navigation">
+				<ul id="topnav" class="nav">
+					<li class="first"><a href="#">Log In</a></li>
+					<li><a href="#">Sign Up</a></li>
+					<li class="last"><a href="#"><img src="images/cart_icon.png" alt="Cart"/></a></li>
+				</ul>
+				<ul id="main-nav" class="nav">
+					<li class="first"><a href="#">Buy</a></li>
+					<li><a href="#">Sell</a></li>
+					<li><a href="#">About</a></li>
+					<li class="last"><a href="#">Blog</a></li>
+				</ul>
+			<div class="clear"></div>
+			</div><!-- end .navigation -->
+			<div class="clear"></div>
+		</div><!-- END #header-top -->
+		<div id="header-bot">
+			<ul id="cat-nav" class="nav">
+				<li><a href="#">Art</a></li>
+				<li><a href="#">Apparel</a></li>
+				<li><a href="#">Health</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Technology</a></li>
+				<li><a href="#">Universal Design</a></li>
+			</ul>
+			<div class="search-wrapper">
+				<form id="search">
+					<input type="image" src="images/search_icon.png" id="glass"></input>
+					<input name="Search" id="search-input" placeholder="Enter Search Here">
+				</form>
+			</div>
+		<div class="clear"></div>
+		</div><!-- END .categories -->
+	<div class="clear"></div>
+	</div><!-- END .wrapper -->
+</div><!-- END .section -->
+
+
+<div class="section" id="slider-wrapper">
+    <div class="wrapper" id="slider"> 
+       <div class="slider-content"><img src="images/featureditem.png" /></div>
+       <div class="slider-content"><img src="images/featuredseller.png" /></div>
+       <div class="slider-content"><img src="http://lorempixum.com/885/380/transport" /></div>
+       <div class="slider-content"><img src="http://lorempixum.com/885/380/fashion" /></div>
+       <div class="slider-content"><img src="http://lorempixum.com/885/380/city" /></div>
+    </div><!-- END .wrapper -->
+</div><!-- END .section -->
+
+
+<script type="text/javascript">
+$(function(){
+   $('#slider').orbit({
+        bullets:true,
+        animation:'horizontal-push',
+        animationSpeed:200,
+        advanceSpeed:12000
+    });
+
+    $('.orbit-wrapper').hover(function(){
+        $('.slider-nav').show();
+    });
+
+    $('.orbit-wrapper').mouseleave(function(){
+        $('.slider-nav').hide();
+    }); 
+});
+</script>
+
+</body>
+</html>

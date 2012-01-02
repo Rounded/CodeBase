@@ -1,0 +1,21 @@
+.picker{
+	position:absolute;
+	right:5px;
+	top:150px;
+	width:130px;
+	font-size: 10px;
+	background: #eee;
+	border: 1px solid #ddd;
+	z-index:100;
+	padding:6px
+}
+
+.picker h3{
+	color: #666;
+	border-bottom: 1px solid #ddd;
+	margin-bottom:5px;
+}
+.picker h4{font-size: 11px;}
+.picker ul{list-style-type: none;margin: 3px 5px;}
+
+.picker small{font-style: italic;color: #999;}

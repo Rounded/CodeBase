@@ -1,0 +1,349 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: EcoPro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-07 00:22-0800\n"
+"PO-Revision-Date: 2010-03-07 00:22-0800\n"
+"Last-Translator: Andrew Powers <andrew@pagelines.com>\n"
+"Language-Team: PageLines <hello@pagelines.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;__ngettext\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:17
+msgid "No Response &#187;"
+msgstr ""
+
+#: comments.php:17
+msgid "1 Response &#187;"
+msgstr ""
+
+#: comments.php:17
+msgid "% Response"
+msgstr ""
+
+#: comments.php:17
+msgid "to &#8220;"
+msgstr ""
+
+#: comments.php:33
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:43
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:43
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:50
+msgid "You must be"
+msgstr ""
+
+#: comments.php:50
+msgid "logged in"
+msgstr ""
+
+#: comments.php:50
+msgid "to post a comment."
+msgstr ""
+
+#: comments.php:57
+msgid "Logged in as"
+msgstr ""
+
+#: comments.php:57
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:57
+msgid "Log out &raquo;"
+msgstr ""
+
+#: comments.php:62
+msgid "Name"
+msgstr ""
+
+#: comments.php:62
+#: comments.php:65
+msgid "(required)"
+msgstr ""
+
+#: comments.php:65
+msgid "Mail (will not be published)"
+msgstr ""
+
+#: comments.php:68
+msgid "Website"
+msgstr ""
+
+#: comments.php:73
+msgid "You can use these tags:"
+msgstr ""
+
+#: comments.php:78
+msgid "Submit Comment"
+msgstr ""
+
+#: footer.php:11
+msgid "Home"
+msgstr ""
+
+#: footer.php:17
+msgid "Pages"
+msgstr ""
+
+#: footer.php:23
+msgid "Stay In Touch"
+msgstr ""
+
+#: footer.php:46
+msgid "More"
+msgstr ""
+
+#: footer.php:55
+msgid "&mdash; Page load time:"
+msgstr ""
+
+#: footer.php:55
+msgid "seconds."
+msgstr ""
+
+#: sidebar.php:20
+msgid "The secondary sidebar has been selected but doesn't have any widgets. Add some widgets to your secondary sidebar in your admin."
+msgstr ""
+
+#: library/_authorinfo.php:6
+msgid "About the author"
+msgstr ""
+
+#: library/_authorinfo.php:9
+msgid "Visit Authors Website"
+msgstr ""
+
+#: library/_contentfooter.php:5
+msgid "Go To Top &raquo;"
+msgstr ""
+
+#: library/_contentsidebar.php:4
+msgid "The content sidebar has been activated on this page/post but doesn't have any widgets added to it. Add some widgets to this sidebar in appearance &gt; widgets in the admin."
+msgstr ""
+
+#: library/_defaultsidebar.php:16
+msgid "Categories"
+msgstr ""
+
+#: library/_defaultsidebar.php:28
+msgid "Tags"
+msgstr ""
+
+#: library/_defaultsidebar.php:40
+msgid "Articles"
+msgstr ""
+
+#: library/_defaultsidebar.php:51
+msgid "Links"
+msgstr ""
+
+#: library/_defaultsidebar.php:62
+msgid "Meta"
+msgstr ""
+
+#: library/_morefoot.php:4
+msgid "Full width widgets selected but no widgets have been added."
+msgstr ""
+
+#: library/_morefoot.php:36
+msgid "Looking for something?"
+msgstr ""
+
+#: library/_morefoot.php:37
+msgid "Use the form below to search the site:"
+msgstr ""
+
+#: library/_morefoot.php:40
+msgid "Still not finding what you're looking for? Drop a comment on a post or contact us so we can take care of it!"
+msgstr ""
+
+#: library/_morefoot.php:51
+msgid "Visit our friends!"
+msgstr ""
+
+#: library/_morefoot.php:51
+msgid "A few highly recommended friends..."
+msgstr ""
+
+#: library/_morefoot.php:62
+msgid "Archives"
+msgstr ""
+
+#: library/_morefoot.php:62
+msgid "All entries, chronologically..."
+msgstr ""
+
+#: library/_pagecontent.php:8
+msgid "<p class=\"serif\">Read the rest of this page &raquo;</p>"
+msgstr ""
+
+#: library/_pagecontent.php:9
+msgid "<p><strong>Pages:</strong> "
+msgstr ""
+
+#: library/_pagecontent.php:11
+msgid "Edit this entry."
+msgstr ""
+
+#: library/_pagination.php:4
+msgid "&laquo; Previous Entries"
+msgstr ""
+
+#: library/_pagination.php:4
+msgid "Next Entries &raquo;"
+msgstr ""
+
+#: library/_post_footer.php:5
+msgid " (Edit Post) "
+msgstr ""
+
+#: library/_posts.php:14
+msgid "Permanent Link To"
+msgstr ""
+
+#: library/_posts.php:24
+msgid "Permanent Link to"
+msgstr ""
+
+#: library/_posts.php:28
+msgid "On"
+msgstr ""
+
+#: library/_posts.php:29
+msgid "in"
+msgstr ""
+
+#: library/_posts.php:30
+msgid "by"
+msgstr ""
+
+#: library/_posts.php:31
+msgid "<strong>(Edit Post)</strong>"
+msgstr ""
+
+#: library/_posts.php:36
+msgid "View Comments"
+msgstr ""
+
+#: library/_posts.php:46
+msgid "Continue Reading"
+msgstr ""
+
+#: library/_posts.php:51
+msgid "Continue Reading &raquo;"
+msgstr ""
+
+#: library/_posts.php:63
+msgid "<p><strong>Pages: </strong> "
+msgstr ""
+
+#: library/_posts.php:64
+msgid "Edit Post"
+msgstr ""
+
+#: library/_posts.php:67
+msgid "Tagged with: "
+msgstr ""
+
+#: library/_posts.php:92
+msgid "Sorry! Error 404 - Page Not Found"
+msgstr ""
+
+#: library/_posts.php:94
+msgid "Nothing Found"
+msgstr ""
+
+#: library/_posts.php:96
+msgid "Sorry, what you are looking for isn't here."
+msgstr ""
+
+#: library/_searchform.php:3
+msgid "Search"
+msgstr ""
+
+#: library/_social_icons.php:3
+msgid "Connect with us:"
+msgstr ""
+
+#: library/_spotlight.php:18
+msgid "Search Results"
+msgstr ""
+
+#: library/_spotlight.php:22
+msgid "Error 404"
+msgstr ""
+
+#: pagelines_core/admin/edit_page.php:85
+#: pagelines_core/admin/edit_post.php:54
+msgid "Update"
+msgstr ""
+
+#: pagelines_core/functions/widget_library.php:10
+msgid "PageLines - Social"
+msgstr ""
+
+#: pagelines_core/functions/widget_library.php:30
+msgid "The options for this widget are in theme options."
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:60
+msgid "RSS not configured"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:65
+msgid "Twitter messages not available."
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:95
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:97
+msgid "Y/m/d"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:99
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:99
+msgid "Y/m/d H:i:s"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:242
+msgid "Twitter Widgets"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:243
+msgid "How many Twitter widgets would you like?"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:247
+msgid "Save"
+msgstr ""
+
+#: pagelines_core/plugins/twitter.php:261
+#, php-format
+msgid "Twitter #%d"
+msgstr ""
+

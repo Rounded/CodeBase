@@ -1,0 +1,8 @@
+#nav ul{float:right;}
+#nav ul li a {border:1px solid #fff;border-bottom: none;}
+
+
+/* POSTS */
+.post-title {
+	width: 300px;
+}

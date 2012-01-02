@@ -1,0 +1,15 @@
+****************************
+
+  PageLines Core Release Notes: 
+
+****************************
+
+
+Version 3.1.6
+- Moved localization in init file
+
+Version 3.1.5
+- added stripslashes in case user has gpc_magic_quotes
+
+
+** Start Changelog tracking **

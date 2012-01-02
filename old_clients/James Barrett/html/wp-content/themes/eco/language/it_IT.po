@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: EcoPro in italiano\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-07 00:22-0800\n"
+"PO-Revision-Date: 2010-04-09 09:55+0100\n"
+"Last-Translator: Gianni Diurno (aka gidibao) <gidibao[at]gmail[dot]com>\n"
+"Language-Team: Gianni Diurno | gidibao.net <gidibao[at]gmail[dot]com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;__ngettext\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Questo articolo é stato protetto con una password. Devi inserire la password per potere leggere i commenti."
+
+#: comments.php:17
+msgid "No Response &#187;"
+msgstr "Nessun commento &#187;"
+
+#: comments.php:17
+msgid "1 Response &#187;"
+msgstr "1 commento &#187;"
+
+#: comments.php:17
+msgid "% Response"
+msgstr "% commenti"
+
+#: comments.php:17
+msgid "to &#8220;"
+msgstr "a &#8220;"
+
+#: comments.php:33
+msgid "Comments are closed."
+msgstr "I commenti non sono attivi."
+
+#: comments.php:43
+msgid "Leave a Reply"
+msgstr "Lascia un commento"
+
+#: comments.php:43
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Lascia un commento a %s"
+
+#: comments.php:50
+msgid "You must be"
+msgstr "Devi essere"
+
+#: comments.php:50
+msgid "logged in"
+msgstr "collegato"
+
+#: comments.php:50
+msgid "to post a comment."
+msgstr "per potere inviare un commento."
+
+#: comments.php:57
+msgid "Logged in as"
+msgstr "Collegato a nome"
+
+#: comments.php:57
+msgid "Log out of this account"
+msgstr "Esci da questo account"
+
+#: comments.php:57
+msgid "Log out &raquo;"
+msgstr "Esci &raquo;"
+
+#: comments.php:62
+msgid "Name"
+msgstr "Nome"
+
+#: comments.php:62
+#: comments.php:65
+msgid "(required)"
+msgstr "(richiesto)"
+
+#: comments.php:65
+msgid "Mail (will not be published)"
+msgstr "Email (non sarà resa pubblica)"
+
+#: comments.php:68
+msgid "Website"
+msgstr "Sito web"
+
+#: comments.php:73
+msgid "You can use these tags:"
+msgstr "Puoi utilizzare questi tag:"
+
+#: comments.php:78
+msgid "Submit Comment"
+msgstr "Invia"
+
+#: footer.php:11
+msgid "Home"
+msgstr "Home"
+
+#: footer.php:17
+msgid "Pages"
+msgstr "Pagine"
+
+#: footer.php:23
+msgid "Stay In Touch"
+msgstr "Resta in contatto"
+
+#: footer.php:46
+msgid "More"
+msgstr "Altro"
+
+#: footer.php:55
+msgid "&mdash; Page load time:"
+msgstr "&mdash; Tempo caricamento pagina:"
+
+#: footer.php:55
+msgid "seconds."
+msgstr "secondi."
+
+#: sidebar.php:20
+msgid "The secondary sidebar has been selected but doesn't have any widgets. Add some widgets to your secondary sidebar in your admin."
+msgstr "La barra laterale secondaria é stata selezionata ma non ha alcun widget. Aggiungi almeno un widget."
+
+#: library/_authorinfo.php:6
+msgid "About the author"
+msgstr "Info autore"
+
+#: library/_authorinfo.php:9
+msgid "Visit Authors Website"
+msgstr "Visita il sito dell'autore"
+
+#: library/_contentfooter.php:5
+msgid "Go To Top &raquo;"
+msgstr "Inizio pagina &raquo;"
+
+#: library/_contentsidebar.php:4
+msgid "The content sidebar has been activated on this page/post but doesn't have any widgets added to it. Add some widgets to this sidebar in appearance &gt; widgets in the admin."
+msgstr "La barra laterale per i contenuti é stata attivata in questo articolo/pagina ma non é stato aggiunto nessun widget. Aggiungi almeno un widget a questa sidebar."
+
+#: library/_defaultsidebar.php:16
+msgid "Categories"
+msgstr "Categorie"
+
+#: library/_defaultsidebar.php:28
+msgid "Tags"
+msgstr "Tag"
+
+#: library/_defaultsidebar.php:40
+msgid "Articles"
+msgstr "Articoli"
+
+#: library/_defaultsidebar.php:51
+msgid "Links"
+msgstr "Link"
+
+#: library/_defaultsidebar.php:62
+msgid "Meta"
+msgstr "Meta"
+
+#: library/_morefoot.php:4
+msgid "Full width widgets selected but no widgets have been added."
+msgstr "Sono stati selezionati i widget a larghezza massima ma nessun widget é stato ancora aggiunto."
+
+#: library/_morefoot.php:36
+msgid "Looking for something?"
+msgstr "Stai cercando qualcosa?"
+
+#: library/_morefoot.php:37
+msgid "Use the form below to search the site:"
+msgstr "Utilizza il modulo qui sotto per effettuare una ricerca nel sito:"
+
+#: library/_morefoot.php:40
+msgid "Still not finding what you're looking for? Drop a comment on a post or contact us so we can take care of it!"
+msgstr "Non hai ancora trovato ciò che cerchi? Inviaci un commento oppure contattaci!"
+
+#: library/_morefoot.php:51
+msgid "Visit our friends!"
+msgstr "Fai una visita ai nostri amici!"
+
+#: library/_morefoot.php:51
+msgid "A few highly recommended friends..."
+msgstr "Alcuni amici che ho il picere di indicarti..."
+
+#: library/_morefoot.php:62
+msgid "Archives"
+msgstr "Archivi"
+
+#: library/_morefoot.php:62
+msgid "All entries, chronologically..."
+msgstr "Tutte le pubblicazioni in ordine cronologico..."
+
+#: library/_pagecontent.php:8
+msgid "<p class=\"serif\">Read the rest of this page &raquo;</p>"
+msgstr "<p class=\"serif\">Prosegui la lettura di questa pagina &raquo;</p>"
+
+#: library/_pagecontent.php:9
+msgid "<p><strong>Pages:</strong> "
+msgstr "<p><strong>Pagine:</strong> "
+
+#: library/_pagecontent.php:11
+msgid "Edit this entry."
+msgstr "Modifica."
+
+#: library/_pagination.php:4
+msgid "&laquo; Previous Entries"
+msgstr "&laquo; Articoli precedenti"
+
+#: library/_pagination.php:4
+msgid "Next Entries &raquo;"
+msgstr "Articoli successivi &raquo;"
+
+#: library/_post_footer.php:5
+msgid " (Edit Post) "
+msgstr " (modifica articolo) "
+
+#: library/_posts.php:14
+msgid "Permanent Link To"
+msgstr "Permalink a"
+
+#: library/_posts.php:24
+msgid "Permanent Link to"
+msgstr "Permalink a"
+
+#: library/_posts.php:28
+msgid "On"
+msgstr "Il"
+
+#: library/_posts.php:29
+msgid "in"
+msgstr "sotto"
+
+#: library/_posts.php:30
+msgid "by"
+msgstr "scritto da"
+
+#: library/_posts.php:31
+msgid "<strong>(Edit Post)</strong>"
+msgstr "<strong>(modifica articolo)</strong>"
+
+#: library/_posts.php:36
+msgid "View Comments"
+msgstr "Visualizza i commenti"
+
+#: library/_posts.php:46
+msgid "Continue Reading"
+msgstr "Prosegui la lettura"
+
+#: library/_posts.php:51
+msgid "Continue Reading &raquo;"
+msgstr "Prosegui la lettura &raquo;"
+
+#: library/_posts.php:63
+msgid "<p><strong>Pages: </strong> "
+msgstr "<p><strong>Pagine: </strong> "
+
+#: library/_posts.php:64
+msgid "Edit Post"
+msgstr "Modifica articolo"
+
+#: library/_posts.php:67
+msgid "Tagged with: "
+msgstr "tag:"
+
+#: library/_posts.php:92
+msgid "Sorry! Error 404 - Page Not Found"
+msgstr "Errore 404 - Pagina Non Trovata"
+
+#: library/_posts.php:94
+msgid "Nothing Found"
+msgstr "Non trovato"
+
+#: library/_posts.php:96
+msgid "Sorry, what you are looking for isn't here."
+msgstr "Stai cercando qualcosa che non é qui."
+
+#: library/_searchform.php:3
+msgid "Search"
+msgstr "Cerca"
+
+#: library/_social_icons.php:3
+msgid "Connect with us:"
+msgstr "Abbonati al feed:"
+
+#: library/_spotlight.php:18
+msgid "Search Results"
+msgstr "Risultati della ricerca"
+
+#: library/_spotlight.php:22
+msgid "Error 404"
+msgstr "Errore 404"
+
+#: pagelines_core/admin/edit_page.php:85
+#: pagelines_core/admin/edit_post.php:54
+msgid "Update"
+msgstr "Aggiorna"
+
+#: pagelines_core/functions/widget_library.php:10
+msgid "PageLines - Social"
+msgstr "PageLines - Social"
+
+#: pagelines_core/functions/widget_library.php:30
+msgid "The options for this widget are in theme options."
+msgstr "Le opzioni per questo widget sono nelle opzioni del tema."
+
+#: pagelines_core/plugins/twitter.php:60
+msgid "RSS not configured"
+msgstr "Feed RSS non configurato"
+
+#: pagelines_core/plugins/twitter.php:65
+msgid "Twitter messages not available."
+msgstr "Messaggi di Twitter non disponibili."
+
+#: pagelines_core/plugins/twitter.php:95
+#, php-format
+msgid "%s ago"
+msgstr "%s fa"
+
+#: pagelines_core/plugins/twitter.php:97
+msgid "Y/m/d"
+msgstr "d/m/Y"
+
+#: pagelines_core/plugins/twitter.php:99
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: pagelines_core/plugins/twitter.php:99
+msgid "Y/m/d H:i:s"
+msgstr "j F Y G:i"
+
+#: pagelines_core/plugins/twitter.php:242
+msgid "Twitter Widgets"
+msgstr "Twitter Widgets"
+
+#: pagelines_core/plugins/twitter.php:243
+msgid "How many Twitter widgets would you like?"
+msgstr "Quanti widget di Twitter desideri?"
+
+#: pagelines_core/plugins/twitter.php:247
+msgid "Save"
+msgstr "Salva"
+
+#: pagelines_core/plugins/twitter.php:261
+#, php-format
+msgid "Twitter #%d"
+msgstr "Twitter #%d"
+

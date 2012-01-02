@@ -1,0 +1,489 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************************************
+			END CSS Reset
+*******************************************/
+
+
+/******************************************
+			Global Classes
+*******************************************/
+
+body {
+	font: 18px Helvetica;
+	background: #ccc;
+	color: #333;
+	font-weight: 300;
+}
+
+#top-space{
+	width:100%;
+	height:59px;
+	float:left;}
+
+a,a:visited {
+	text-decoration: none;
+	color: #92C638;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.section {
+	width: 100%;
+	float: left;
+}
+
+.section-center {
+	width: 960px;
+	margin: 0px auto;
+}
+
+.column470 {
+	width: 470px;
+	float: left;
+}
+
+.column225 {
+	width: 225px;
+	float: left;
+}
+
+.column204 {
+	width: 204px;
+	float: left;
+/* 	background: green; */
+	overflow: hidden;
+}
+
+.top-spacer {	
+	background: url(images/spacer-bg.png) top left repeat-x;
+}
+
+.h-spacer20 {
+	width: 100%;
+	height: 20px;
+	float: left;
+}
+
+.h-spacer22 {
+	width: 100%;
+	height: 22px;
+	float: left;
+}
+
+.v-spacer20 {
+	height: 100%;
+	width: 20px;
+	float: left;
+}
+
+.v-spacer48 {
+	height: 100%;
+	width: 48px;
+	float: left;
+/* 	background: red; */
+}
+
+/******************************************
+			Header
+*******************************************/
+
+#header-section {
+	background: #5b5b5b;
+	position:fixed;
+	top:0;
+	z-index:20;
+}
+
+#header {
+	height: 40px;
+	padding: 10px 0px;
+	
+}
+
+#header a{
+	text-decoration:none;
+}
+
+#header .logo-wrapper {
+	float: left;
+	height: 40px;
+	width:250px;
+}
+
+#logo-spacer{
+	width:100%;
+	height:3px;}
+
+#header h1 {
+	display: block;
+	font-size: 40px;
+	color: #fff;
+	float: left;
+	font-weight: 500;
+	letter-spacing: -1px;
+}
+
+#header .logo {
+	display: block;
+	float: left;
+	padding:3px 10px 0px 0px;
+}
+
+
+#navbar-wrapper {
+	float: right;
+	height: 40px;
+}
+
+#navbar {
+	float: right;
+}
+
+#navbar ul li{
+	display: block;
+	height: 40px;
+	float: left;
+	padding-left: 23px;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+#navbar ul li a,
+#navbar ul li a:visited {
+	color: #fff;
+	display:block;
+	text-align:center;
+	height:25px;
+	padding:0px 15px;
+	line-height: 26px;
+	margin-top:7px;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
+}
+
+.nav-link:hover{
+	text-decoration: none;
+	background:#7b7b7b;
+	-webkit-transition: background 400ms; /* property duration timing-function delay */
+    -moz-transition: background 400ms;
+    -o-transition: background 400ms ;
+    transition: background 400ms ;
+
+}
+
+#current-page{
+	text-decoration: none;
+	background:url(images/nav-btn-bg.png);
+	border-bottom:1px solid #888;
+}
+
+#current-page:hover{
+	text-decoration: none;
+}
+
+/******************************************
+			Index Page
+*******************************************/
+
+/*------ Slider ------ */
+
+#slider-section {
+	background: #fff;
+}
+
+#slider {
+	border-bottom: 3px solid #888;
+	height: 297px;
+/* 	width: 1020px; */
+}
+
+#slider .text {
+	float: left;
+	width: 350px;
+	padding-top: 20px;
+}
+
+#slider .text h1 {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#slider .text p{
+	font-size: 22px;
+	line-height: 30px;
+	padding-bottom: 20px;
+}
+
+#slider .image {
+	float: right;
+}
+
+.slider-content{
+	z-index:-5;}
+
+/*------ Info ------ */
+
+#info-section {
+	background: #fff;
+/* 	height: 240px; */
+}
+
+#info {
+	height: 300px;
+/* 	background: #ccc; */
+	border-bottom: 3px solid #888;
+	padding: 30px 0px;
+}
+
+#info .column470 {
+	height: 300px;
+}
+
+#info h1 {
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+#info .graph {
+	background:#dbdce0;
+}
+
+#info .graph h3 {
+	display: block;
+	width: 450px;
+	height: 120px;
+	float: left;
+	padding-left: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 120px;
+}
+
+#graph {
+	
+	width: 470px;
+	float: left;
+}
+
+#info .graph img {
+	padding: 0px 0px 0px 70px;
+}
+
+/*------ Core Services ------ */
+
+#core-section {
+	background: #fff;
+/* 	height: 315px; */
+}
+
+#core {
+	height: 275px;
+/* 	background: #444; */
+	padding: 30px 0px;
+}
+
+#core .column225 {
+	height: 275px;
+/* 	background: #666; */
+}
+
+#core .column225 .title {
+	float: left;
+	display: block;
+	clear: both;
+	padding-bottom: 5px;
+}
+
+#core .column225 p {
+	display: block;
+	float: left;
+	clear: both;
+	line-height: 27px;
+	font-weight: 200;
+}
+
+/*************************************
+			Aloha Page 
+*************************************/
+
+#contact-section {
+	background: #fff;
+}
+
+.title-section {
+	width: 960px;
+	height: 80px;
+	float: left;
+/* 	background: red; */
+	line-height: 80px;
+}
+
+.title-section h1{
+	font-family: Helvetica;
+	color: #5b5b5b;
+	font-size: 50px;
+	padding: none;
+	margin: none;
+	font-weight: 900;
+}
+.intro-section{
+	width: 900px;
+	margin: 0px auto;
+}
+.intro-section img{
+	width: 225px;
+	height: 300px;
+}
+.ben, .eric, .rob{
+	float: left;
+	margin: 10px 30px;
+}
+.intro-section h2{
+	font-size: 30px;
+}
+.intro-section h3{
+	font-size: 15px;
+}
+.intro-section p{
+	font-size: 13px;
+	width: 225px;
+}
+
+/***************************************
+			Services Page
+****************************************/
+
+#services-section {
+	background: #fff;
+}
+
+#services-table {
+	width: 960px;
+	float: left;
+}
+
+.v-spacer48 {
+	height: 100px;
+}
+
+.service-umbrella {
+/* 	background: orange; */
+}
+
+.service-title {
+	display: block;
+	width: 204px;
+	height: 60px;
+	font-weight: 500;
+	font-size: 25px;
+	color: #333;
+	float: left;
+	line-height:85px;
+/* 	background: blue; */
+}
+
+.service-box{
+	width: 204px;
+	float: left;
+}
+
+/***************************************
+			 Tumblr
+****************************************/
+t-sidebar{
+	float: right;
+	width: 200px;
+}
+t-search{
+	float: left;
+	border-bottom: 1px solid black;
+}
+t-description{
+	float: left;
+	border-bottom: 1px solid black;
+}
+t-posts{
+	border-right: 1px solid black;
+	width: 600px;
+}
+
+/***************************************
+			 Footer
+****************************************/
+
+#footer-section {
+	background: #ccc;
+}
+
+#footer {
+	height: 210px;
+	text-align: center;
+	text-shadow: 0px 2px 0px #fff;
+}	
+
+#footer a{
+	color:#333;}
+	
+#footer a:hover{
+	color:#92C638;
+	text-shadow: 0px 0px 0px #000;
+	text-decoration:none;}
+
+#copyright{
+	font-size:12px;
+	margin-top:10px;}
+
+
+

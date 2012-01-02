@@ -1,0 +1,522 @@
+	.ui-tabs .ui-tabs-hide {
+	     display: none;
+	}
+	
+	#interfacetitle{background: #ddd;	padding: 8px;}
+	#optionstable{
+		width: 920px;
+		margin: 20px auto;
+		padding:0;
+		text-shadow: #fff 0 1px 0;
+		
+	}
+	.pagelines_panel{
+		position: relative;
+		z-index: 0;
+	}
+	.ajax_save_confirmation {
+			text-shadow: #000 0px -1px 0;
+		color: #fff;
+		font-size: 30px;
+		padding: 65px;
+		background: transparent url('../images/admin/bg_option_confirm.png') repeat 0 0;
+		z-index: 100;
+		position: absolute;
+		left: 280px;
+		top: 200px;
+		-moz-border-radius: 25px;
+		-khtml-border-radius: 25px;
+		-webkit-border-radius: 25px;
+		border-radius: 25px;
+	}
+	.ajax_save_confirmation div{
+		background: transparent url('../images/admin/confirm-check.png') no-repeat left center;
+		padding-left: 60px;
+		height: 50px;
+		line-height: 50px;
+		
+	}
+	.message_area {
+		height: 35px;
+	}
+	.wrap .updated, .wrap .error {
+		margin:0;
+		margin-bottom: 8px;
+	}
+	div.form_title{
+		font-size: 24px;
+		padding-top: 0px;
+		margin-bottom: 8px;
+		font-style: normal;
+		letter-spacing: -.05em;
+		font-family: georgia, times, serif;
+		color: #000;
+	}
+
+	#tabs {
+		border: 1px solid #ccc;
+		border-top: none;
+		border-bottom: none;
+		background: #eee url('../images/admin/bg_tabs.png') repeat-y left top;
+	}
+	.tabtitle {
+		padding: 16px 0 0 35px;
+		font-size: 1.3em;
+		font-weight: bold;
+		color: #000;
+		width: 100%;
+	}
+	#tabsnav {
+		float: left;
+		width: 200px;
+		margin:0 -200px 0 0;
+	}
+		#tabsnav li{
+			margin: 0;
+			padding:0;
+		}
+		#tabsnav li a, #tabsnav li span.graphic{
+			font-weight:bold;
+			padding: 8px;
+			display: block;
+			text-decoration:none;
+			color: #000;
+			border-bottom: 1px solid #ddd;
+			border-top: 1px solid #fff;
+			border-left: 1px solid transparent;
+		}
+			#tabsnav li span.graphic.top{
+				border-top:1px solid #fff;
+				height: 20px;
+				padding: 0;
+			}
+			#tabsnav li span.graphic.bottom{
+				border-bottom:none;
+				height: 0;
+				padding:0;
+			}
+			
+			#tabsnav li a:hover{
+				background:#f7f7f7;
+	
+				border-top: 1px solid #fff;
+				border-left: 1px solid #fff;
+				border-right: none;
+				border-bottom: 1px solid #ddd;
+			}
+			#tabsnav .ui-state-active a, #tabsnav .ui-state-active a:hover{
+					border-top: 1px solid #aaa;
+					border-left: 1px solid #aaa;
+					border-right: none;
+					border-bottom: 1px solid transparent;
+					background: #dedede;
+			}
+			#tabsnav li a span {
+				padding-left: 25px;
+				display: block;
+			}
+			#tabsnav li.listsave {
+				padding: 10px 30px;
+				border-top: 1px solid #ddd;
+				margin-top: 2em;
+				text-align: center;
+			}
+			
+			
+			.sidebar_options span{background: transparent url(../images/admin/sidebar.png) no-repeat 0 0;}
+			#sidebar_options .tabtitle{background: transparent url(../images/admin/sidebar.png) no-repeat 10px 16px;}
+			
+			.display_options span{background: transparent url(../images/admin/color.png) no-repeat 0 0;}
+			#display_options .tabtitle{background: transparent url(../images/admin/color.png) no-repeat 10px 16px;}
+		
+			.header_and_nav span{background: transparent url(../images/admin/header.png) no-repeat 0 0;}
+			#header_and_nav .tabtitle{background: transparent url(../images/admin/header.png) no-repeat 10px 16px;}
+			
+			.pages_and_posts span{background: transparent url(../images/admin/page2.png) no-repeat 0 0;}
+			#pages_and_posts .tabtitle{background: transparent url(../images/admin/page2.png) no-repeat 10px 16px;}
+			
+			.media_options span{background: transparent url(../images/admin/feed.png) no-repeat 0 0;}
+			#media_options .tabtitle{background: transparent url(../images/admin/feed.png) no-repeat 10px 16px;}
+			
+			.footer_options span{background: transparent url(../images/admin/footer.png) no-repeat 0 0;}
+			#footer_options .tabtitle{background: transparent url(../images/admin/footer.png) no-repeat 10px 16px;}
+			
+			.custom_code span{background: transparent url(../images/admin/code.png) no-repeat 0 0;}
+			#custom_code .tabtitle{background: transparent url(../images/admin/code.png) no-repeat 10px 16px;}
+			
+			.text_options span{background: transparent url(../images/admin/quotation.png) no-repeat 0 0;}
+			#text_options .tabtitle{background: transparent url(../images/admin/quotation.png) no-repeat 10px 16px;}
+			
+			.global_options span{background: transparent url(../images/admin/compass.png) no-repeat 0 0;}
+			#global_options .tabtitle{background: transparent url(../images/admin/compass.png) no-repeat 10px 16px;}
+			
+			.feature_settings span{background: transparent url(../images/admin/wrench.png) no-repeat 0 0;}
+			#feature_settings .tabtitle{background: transparent url(../images/admin/wrench.png) no-repeat 10px 16px;}
+			
+			.welcome span{background: transparent url(../images/admin/welcome.png) no-repeat 0 0;}
+			#welcome .tabtitle{background: transparent url(../images/admin/welcome.png) no-repeat 10px 16px;}
+			
+			
+			/* Feature Icon Rules */
+				.feature span{background: transparent url(../images/admin/docf.png) no-repeat 0 0;} 
+				.featuretab .tabtitle{background: transparent url(../images/admin/docf.png) no-repeat 10px 16px;}
+			
+				.fbox span{background: transparent url(../images/admin/docb.png) no-repeat 0 0;}
+				.fboxtab .tabtitle{background: transparent url(../images/admin/docb.png) no-repeat 10px 16px;}
+			
+			#tabsnav.readme li a span{background: transparent url(../images/admin/bullet_black.png) no-repeat 0 0;}
+		
+			
+			#install .tabtitle{background: transparent url(../images/admin/arrow-down.png) no-repeat 10px 16px;}
+			
+			#featurepage .tabtitle{background: transparent url(../images/admin/images-stack.png) no-repeat 10px 16px;}
+			
+			#createposts .tabtitle{background: transparent url(../images/admin/sticky-note-pin.png) no-repeat 10px 16px;}
+			#custompage .tabtitle{background: transparent url(../images/admin/hammer-screwdriver.png) no-repeat 10px 16px;}
+			#themeoptions .tabtitle{background: transparent url(../images/admin/tick.png) no-repeat 10px 16px;}
+			
+			#ads .tabtitle{background: transparent url(../images/admin/money.png) no-repeat 10px 16px;}
+			
+			
+			#flickr .tabtitle{background: transparent url(../images/admin/flickr.png) no-repeat 10px 16px;}
+			
+			#forms .tabtitle{background: transparent url(../images/admin/notebook-arrow.png) no-repeat 10px 16px;}
+			
+			#faq .tabtitle{background: transparent url(../images/admin/question-balloon.png) no-repeat 10px 16px;}
+			
+			
+		
+	
+	#thetabs {
+		margin-left: 200px;
+		width: 713px;
+		background: #f7f7f7;
+		border-left: 1px solid #ccc;
+	}
+
+	.tabinfo {
+		float: left;
+		width: 99%;
+		
+		border-left: 1px solid #fff;
+		border-top:1px solid #fff;
+	}
+	.inforow {
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		padding: 15px;
+		margin: 15px;
+		width:650px;
+	
+	}
+		.inforow p, .inforow ul{
+			font-size: 1em;
+			line-height: 1.3em;
+		}
+		.inforow ul {
+			margin: .4em 0 1em 0;
+		}
+		.inforow ul li{
+			list-style-type: square;
+			margin-left: 20px;
+		}
+	
+	.optionrow {
+		padding: 15px 0;
+		width: 100%;
+	}
+		.optiontitle {
+			padding: 10px 15px;
+			background: #eee;
+			border-top: 1px solid #eaeaea;
+			border-bottom: 1px solid #eaeaea;
+		}
+		
+		.optionicon {
+			float:left;
+			margin: 2px 10px 6px 0;
+		}
+		.optioninputs {
+			margin-left: 40px;
+		}
+		.context {
+			font-size: 11px;
+			font-weight:bold;
+			margin-top: 5px;
+		}
+		
+		.insidebox.context{
+			margin: 5px;
+			padding: 10px;
+			background: #eee;
+		}
+		.context .button-secondary, .context .button-primary {margin-right: 10px;}
+		
+
+	.theinputs {
+		width: 55%;
+		margin: 0 2%;
+		float: left;
+		text-align: left;
+	}
+	.theinputs .button-primary {
+	}
+	.fullinput {
+		width: 98%;
+		margin: 0 2%;
+		float: left;
+	}
+	.theexplanation {
+		margin: 0 0 0 10px;
+		width: 34%;
+		float:left;
+		border-left: 1px solid #DDD;
+		padding: 10px;
+	}
+	.theexplanation p{
+		font-size: 11px;
+		margin: 5px 0;
+	}
+	
+	
+	.wideinputs .theinputs{
+		width: 677px;
+		margin: 0 10px 0 0;
+	}
+	
+	 .wideinputs .theexplanation {
+		border-left: none;
+		margin-left: 50px;
+		width: 580px;
+		background: #efefef;
+		font-size: 11px;
+	}
+	
+		.wideinputs .theexplanation .theexample {
+			width: 200px ;
+			margin-top: -23px;
+			margin-left: 8px;
+			position:relative;
+			float:right;
+			padding: 10px ;
+			border: 1px solid #ddd;
+			background: #e5e5e5;
+		}
+	.text_content p, .text_content ul{
+		font-size: 1em;
+	}
+	
+	.text_content ul li p, .text_content ul li ul li{margin-left: 10px;}
+
+	.optionrestore {
+		padding: 5px;
+		color: #999;
+	}
+	#optionsheader {
+		background: #e5e5e5 url('../images/admin/bg-optionheader.jpg') repeat-x 0 0;
+		border: 1px solid #ccc;
+		border-top: none;
+		border-bottom: 1px solid #aaa;
+	}
+	
+		#optionstop{
+			padding: 0px;
+		}
+		
+		.optionsheader_plink{
+			float: right;
+			margin: 10px 10px 0 0;
+			display: inline;
+			border: 1px solid #c6c6c6;
+			border-right: 1px solid #c1c1c1;
+			border-bottom: 1px solid #c1c1c1;
+			background: url('../images/sprite-greyleaf-30.jpg') no-repeat 0 0;
+			text-indent:-2000em;
+			width: 30px;
+			height: 30px;
+		}
+		.optionsheader_plink:hover {
+			background: url('../images/sprite-greyleaf-30.jpg') no-repeat 0 -30px;
+		}
+		.optionsheader_plink:active {
+			background: url('../images/sprite-greyleaf-30.jpg') no-repeat 0 -60px;
+		}
+		.options_intro {
+			float: left;
+			margin: 10px 8px ;
+			padding-left: 25px;
+			background: transparent url(../images/admin/leaf.png) no-repeat 0 1px;
+		}
+	#optionsheader p{
+		margin: 0;
+		
+	}
+	#optionssubheader{
+		text-align: left;
+		background: #eaeaea;
+	}
+	#optionssubheader .subheader_right{
+		text-align: right;
+		float: right;
+		width: 400px;
+	}
+	
+	#optionssubheader .subheader_links{
+		font-size: 12px;
+	
+		float:left;
+		width: 350px;
+	}
+	#optionssubheader .subheader_links a{
+		padding: 1px 0 1px 22px;
+		
+		text-transform: uppercase;
+		text-shadow: #fff 0 1px 0;
+		text-decoration: none;
+		color: #666;
+		margin-right:20px;
+		line-height: 25px;
+		overflow: visible;
+	}
+	#optionssubheader .subheader_links a:hover{
+		text-decoration: underline;
+		text-shadow: none;
+		color: #000;
+	}
+	
+	#optionssubheader .subheader_links a.sh_docs{
+		background: transparent url(../images/admin/reports.png) no-repeat 0 0px;
+	}
+	#optionssubheader .subheader_links a.sh_forum{
+		background: transparent url(../images/admin/question-balloon.png) no-repeat 0 0px;
+	}
+	#optionssubheader .subheader_links a.sh_pro{
+		background: transparent url(../images/favicon-pagelines.png) no-repeat 0 0px;
+	}
+	
+	#optionssubheader div.padding{
+		padding: 5px 10px ;
+	}
+	#optionsfooter{
+		background: #eee;
+		border: 1px solid #ccc;
+		border-top: none;
+		margin-bottom: 1em;
+	}
+	#optionsfooter .theinputs{
+		width: 93%;
+		padding: 10px;
+		text-align:right;
+	}
+	#optionsfooter .admin_footerlink{float: left;display: block; font-size: 10px; color: #999;}
+	#optionsfooter .button-primary {
+	}
+	
+/* Pro Version Billboard */
+
+	#vpro_billboard{
+		background: #eee;
+		padding: 13px;
+		border:3px solid #ddd;
+		font-size: 10px;
+		height: 56px;
+	}
+		#vpro_billboard .vpro_desc{
+			float: left;
+			width: 520px;
+		}
+		
+		#vpro_billboard .vpro_thumb {
+			display: block;
+			float:right;
+			width: 125px;
+			border: 2px solid #ddd;
+		}
+
+/* PAGE OPTIONS */
+
+.page_option {
+	background: #f7f7f7;
+	margin: 10px 20px;
+	padding: 5px 8px 5px 27px;
+	border: 1px solid #eee;
+}
+	.page_option .admin_checkbox{margin-left:-20px;float:left;display:inline;}
+	.page_option p{
+		margin: 2px 0;
+	}
+	.page_option .page_option_text_exp{
+		float:left;
+		padding: 16px 10px 16px 0;
+		width: 40%;
+	}
+	.page_option textarea {
+		float:left;
+		width: 50%;
+		height: 80px;
+		margin:4px 0;
+		font-size: 10px;
+	}
+	.page_option .further_explanation {
+		float:left;
+		width: 50%;
+		padding: 20px 10px;
+		background: #eee;
+		border: 1px solid #ddd;
+	}
+/* universal stuff */
+	#tabs textarea{
+		font-size: 11px;
+		width: 94%;
+	}
+	#tabs textarea.longtext{
+		height: 170px;
+	}
+	#tabs option {
+		
+			font-size: 1.1em;
+		padding: 3px 6px;
+	}
+	#tabs .admin_checkbox {
+		display: block;
+		float: left;
+		margin: 2px 0 0 -20px;
+	}
+	#tabs .regular-text {width: 90%;}
+	.border{
+		border: 1px solid #ddd;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.hl, .hl2 {
+		background: url(../images/hl-dot.gif) repeat-x top;
+		clear: both;
+		height: 2px;
+		overflow: hidden;
+		width: 100%;
+	}
+	
+	.imagerow {
+		border-top: 1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		background: #eee;
+		padding: 15px;
+		margin: .5em 0 1em 0;
+	}
+	.alignright {
+		float: right;
+		margin-left: 15px;
+		margin-bottom: 10px;
+	}
+	.alignleft {
+		float: left;
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+	
+	.fix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+	.fix{display:inline-block;} 
+	* html .fix{height:1%;}
+	.fix{display:block;}
+
