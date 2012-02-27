@@ -1,5 +1,0 @@
-; $Id$
-name = estimator
-description = "A savings estimator for health care plan costs"
-core = 6.x
-
