@@ -1,7 +1,7 @@
 /**********************/
 /*  Constants & Notes */
 /**********************/
-var mobile_site_url = "http://www.wearemobile.co/stratcom";
+var mobile_site_url = "http://www.wearemobile.co/cmc";
 var days_to_keep_cookie = 5;
 var url_to_stop_redirect = "?mobile=false";
 // Don't change anything below this line
